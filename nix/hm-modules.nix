@@ -15,8 +15,7 @@ let
     ${lib.optionalString cfg.systemd.enable systemdActivation}
     ${cfg.autostart_sh}
   '';
-in
-{
+in {
   options = {
     wayland.windowManager.mango = with lib; {
       enable = mkOption {
